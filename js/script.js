@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const outputMsg = document.getElementById('outputMsg');
     const formError = document.getElementById('formError');
     const formSuccess = document.getElementById('formSuccess');
-
     // Fungsi sederhana untuk cegah XSS
     function escapeHTML(str) {
         return str.replace(/[&<>"']/g, function(m) {
@@ -41,6 +40,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('Email tidak valid:', email);
                 return;
             }
+
+        // Buat timestamp dan elemen pesan baru
+            const now = new Date();
+            const timeStamp = now.toLocaleString('id-ID', {
+                weekday: 'short', day: 'numeric', month: 'short',
+                hour: '2-digit', minute: '2-digit'
+            });
+
+            const messageItem = document.createElement('div');
+            messageItem.classList.add('message-item');
+            messageItem.innerHTML = `
+                <p><strong>Nama:</strong> ${escapeHTML(name)}</p>
+                <p><strong>Email:</strong> ${escapeHTML(email)}</p>
+                <p><strong>Pesan:</strong> ${escapeHTML(message)}</p>
+                <p><em>Dikirim: ${escapeHTML(timeStamp)}</em></p>
+                <hr>
+            `;
+            document.getElementById('outputBox').prepend(messageItem);
 
             // Tampilkan ke output (escape untuk keamanan)
             outputName.textContent = escapeHTML(name);
