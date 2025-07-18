@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Mahasiswa IT</title>
+    <!-- Link ke CSS eksternal -->
+    <link rel="stylesheet" href="css/essential.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="container header-flex">
+            <div class="logo">Mahasiswa<span>IT</span></div>
+            <nav>
+                <a href="#about">Tentang</a>
+                <a href="#project">Project</a>
+                <a href="#contact">Kontak</a>
+                <a href="portfolio.html" class="btn-portfolio">Portofolio</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <!-- =============== HERO ===================== -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Selamat Datang di Website Mahasiswa IT</h1>
+            <p>Website ini dibuat untuk memperkenalkan karya, project, dan perjalanan belajar saya di dunia teknologi informasi.
+            </p>
+            <a href="portfolio.html" class="btn-main">Lihat Portofolio</a>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <!-- =============== ABOUT ==================== -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Tentang Saya</h2>
+            <p>Saya adalah mahasiswa IT yang antusias mempelajari web development, pemrograman, dan teknologi terbaru.
+                Website ini menjadi wadah untuk berbagi karya dan pengalaman selama kuliah.</p>
+        </div>
+    </section>
+
+    <!-- PROJECT SECTION -->
+    <!-- =============== PROJECT ================== -->
+    <section id="project" class="project">
+        <div class="container">
+            <h2>Project Pilihan</h2>
+            <div class="project-list">
+                <article>
+                    <h3>Website Toko Online</h3>
+                    <p>Membangun toko online sederhana menggunakan HTML, CSS, dan JavaScript.</p>
+                </article>
+                <article>
+                    <h3>Aplikasi To-Do List</h3>
+                    <p>Aplikasi pencatat tugas harian berbasis web, mudah digunakan dan responsif.</p>
+                </article>
+                <article>
+                    <h3>Game Tebak Angka</h3>
+                    <p>Game sederhana untuk belajar logika pemrograman dan interaksi user.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- MESSAGE US SECTION -->
+    <!-- =============== MESSAGE US =============== -->
+    <section id="contact" class="contact">
+        <div class="container flex-message">
+            <!-- Form -->
+            <div class="form-message">
+                <h2>Message Us</h2>
+                <form id="messageForm" autocomplete="off" novalidate>
+                    <label for="fullName">Nama Lengkap</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Nama lengkap Anda">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Email aktif">
+
+                    <label for="message">Pesan</label>
+                    <textarea id="message" name="message" rows="3" required placeholder="Tulis pesan Anda"></textarea>
+
+                    <button type="submit" class="btn-main">Kirim Pesan</button>
+                    <div id="formError" class="form-error"></div>
+                    <div id="formSuccess" class="form-success"></div>
+                </form>
+            </div>
+            <!-- Output -->
+            <div class="output-message">
+                <h2>Pesan Anda</h2>
+                <div id="outputBox" class="output-box">
+                    <p><strong>Nama:</strong> <span id="outputName">-</span></p>
+                    <p><strong>Email:</strong> <span id="outputEmail">-</span></p>
+                    <p><strong>Pesan:</strong> <span id="outputMsg">-</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <!-- =============== FOOTER =================== -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Mahasiswa IT. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
